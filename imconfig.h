@@ -60,6 +60,12 @@
             return ImVec2(x - _v.x,y - _v.y); \
         } \
         ImVec2(float val):x(val),y(val) {}\
+        ImVec2 operator/(float _v) { \
+            return ImVec2( x/_v, y/_v); \
+        } \
+        ImVec2 operator*(float _v) { \
+            return ImVec2( x*_v, y*_v); \
+        } \
 
 /*
 #define IM_VEC4_CLASS_EXTRA                                                 \
